@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class Test_binarytreelevelordertraversal {
-    public List<List<Integer>> levelOrder(TreeNode<Integer> root) {
+    public List<List<Integer>> levelOrder(TreeNode root) {
 
         List<List<Integer>> res = new ArrayList<>();
         if(root==null)
@@ -22,7 +22,7 @@ public class Test_binarytreelevelordertraversal {
             for (int i = 0; i < k; i++) {
 
                 TreeNode n = queue.poll();
-                list.add((Integer) n.data);
+                list.add((Integer) n.val);
                 if(n.left!=null){
                     queue.offer(n.left);
                     kt++;

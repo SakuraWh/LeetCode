@@ -7,7 +7,7 @@ public class dfs {
     public static void up_down(TreeNode root){
         if(root ==null)
             return;
-        System.out.print(" "+root.data);
+        System.out.print(" "+root.val);
         up_down(root.left);
         up_down(root.right);
     }
@@ -23,7 +23,7 @@ public class dfs {
             return;
         down_up(root.left);
         down_up(root.right);
-        System.out.print(" "+root.data);
+        System.out.print(" "+root.val);
     }
 
 

@@ -10,7 +10,7 @@ public class Test_insertintoabinarysearchtree {
         return root;
     }
     public void bst(TreeNode root, int val) {
-        if(val>(Integer) root.data){
+        if(val>(Integer) root.val){
             if(root.right!=null)
                 bst(root.right,val);
             else

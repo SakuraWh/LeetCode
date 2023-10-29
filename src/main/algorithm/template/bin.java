@@ -1,9 +1,9 @@
 package main.algorithm.template;
 
-import com.sun.scenario.effect.Merge;
+
 import main.algorithm.DataStruct.tree.entity.TreeNode;
 
-public class 分治法 {
+public class bin {
     public int[] traversal(TreeNode root){
         // nil or leaf
         if(root == null)  {

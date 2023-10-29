@@ -12,7 +12,7 @@ public class bfs {
         queue.add(root);
         while(!queue.isEmpty()){
             TreeNode t = queue.poll();
-            System.out.print(t.data);
+            System.out.print(t.val);
             if (t.left!=null)
                 queue.offer(t.left);
             if (t.right!=null)

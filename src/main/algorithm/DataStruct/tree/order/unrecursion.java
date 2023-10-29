@@ -2,6 +2,8 @@ package main.algorithm.DataStruct.tree.order;
 
 import main.algorithm.DataStruct.tree.entity.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -17,7 +19,7 @@ public class unrecursion {
         TreeNode t = root;
         while (!stack.isEmpty() || t != null) {
             while (t != null) {
-                System.out.print(t.data);
+                System.out.print(t.val);
                 stack.push(t);
                 t = t.left;
             }
@@ -25,6 +27,20 @@ public class unrecursion {
             t = t.right;
         }
     }
+
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> ans = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        stack.add(root);
+        while(!stack.isEmpty()){
+            TreeNode t = stack.pop();
+            System.out.println(t.val);
+            stack.add(t.right);
+            stack.add(t.left);
+        }
+        return ans;
+    }
+
 
     public static void inOrder(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
@@ -35,11 +51,29 @@ public class unrecursion {
                 t = t.left;
             }
             t = stack.pop();
-            System.out.print(t.data);
+            System.out.print(t.val);
             t = t.right;
         }
     }
 
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> ans = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode t =root;
+        //stack.add(root);
+        while (t!=null||!stack.isEmpty()){
+            if(t != null){
+                stack.add(t);
+                t=t.left;
+            }else {
+                t = stack.pop();
+                System.out.println(t.val);
+                t=t.right;
+            }
+        }
+
+        return ans;
+    }
     /**
      * 对于一个结点：
      * 左孩子全遍历，但不能出栈(右孩子没遍历)
@@ -61,13 +95,30 @@ public class unrecursion {
                 if (t.right == null || t.right == lastVisit) {
                     //右孩子访问过
                     t = stack.pop();
-                    System.out.print(t.data);
+                    System.out.print(t.val);
                     lastVisit = t;
                 } else {
                     t = t.right;
                 }
             }
         }
+    }
+
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> ans = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        stack.add(root);
+        while(!stack.isEmpty()){
+            TreeNode t = stack.pop();
+            if(t!=null){
+                System.out.println(t.val);
+                stack.add(t.left);
+                stack.add(t.right);
+            }
+
+        }
+        return ans;
+
     }
 
 

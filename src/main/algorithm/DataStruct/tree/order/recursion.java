@@ -13,7 +13,7 @@ public class recursion {
     public static void preOrder(TreeNode root){
         if(root == null)
             return;
-        System.out.printf("%d ",root.data);
+        System.out.printf("%d ",root.val);
         preOrder(root.left);
         preOrder(root.right);
     }
@@ -22,7 +22,7 @@ public class recursion {
         if(root == null)
             return;
         inOrder(root.left);
-        System.out.printf("%d ",root.data);
+        System.out.printf("%d ",root.val);
         inOrder(root.right);
     }
 
@@ -31,7 +31,7 @@ public class recursion {
             return;
         postOrder(root.left);
         postOrder(root.right);
-        System.out.printf("%d ",root.data);
+        System.out.printf("%d ",root.val);
     }
 
 

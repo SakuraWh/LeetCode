@@ -10,10 +10,10 @@ public class Test_validatebinarysearchtree {
     public boolean div(TreeNode root,long min,long max) {
         if (root == null)
             return true;
-        if((long)root.data>min&&(long)root.data<max){
-            boolean left = div(root.left,min,(long) root.data);
+        if((long)root.val>min&&(long)root.val<max){
+            boolean left = div(root.left,min,(long) root.val);
             System.out.println(left);
-            boolean right = div(root.right,(long)root.data,max);
+            boolean right = div(root.right,(long)root.val,max);
             return left && right;
         }
         return false;

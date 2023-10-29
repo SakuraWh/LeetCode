@@ -1,21 +1,21 @@
 package main.algorithm.DataStruct.tree.entity;
 
-public class TreeNode<E> {
+public class TreeNode {
 
     public TreeNode left;
     public TreeNode right;
-    public E data;
+    public int val;
 
     public TreeNode() {
     }
 
-    public TreeNode(E data) {
-        this.data = data;
+    public TreeNode(int val) {
+        this.val = val;
     }
 
-    public TreeNode(TreeNode left, TreeNode right, E data) {
+    public TreeNode(TreeNode left, TreeNode right, int data) {
         this.left = left;
         this.right = right;
-        this.data = data;
+        this.val = data;
     }
 }

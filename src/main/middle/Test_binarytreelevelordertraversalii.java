@@ -19,7 +19,7 @@ public class Test_binarytreelevelordertraversalii {
             for (int i = 0; i < k; i++) {
 
                 TreeNode n = queue.poll();
-                list.add((Integer) n.data);
+                list.add((Integer) n.val);
                 if(n.left!=null){
                     queue.offer(n.left);
                     kt++;
