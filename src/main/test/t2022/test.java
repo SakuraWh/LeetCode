@@ -4,32 +4,32 @@ package main.test.t2022;
 import java.util.Random;
 
 public class test {
-    public static void main(String[] args) {
-        Random random = new Random();
-        Soulation soulation = new Soulation();
-        for (int i = 0; i < 10; i++) {
-            int n = random.nextInt(1, 20);
-            int[] a = new int[n + 5];
-            for (int j = 0; j < n; j++) {
-                a[j] = random.nextInt(1, 20);
-            }
-            int my = soulation.func_1(n, a);
-            int he = soulation.func_2(n, a);
-            if (my == he) {
-                System.out.println("序号" + i + "测试成功！");
-
-            }else {
-                System.out.println(n);
-                for (int j = 0; j < n; j++) {
-                    System.out.print(a[j]+" ");
-                }
-                return;
-            }
-
-        }
-
-
-    }
+//    public static void main(String[] args) {
+//        Random random = new Random();
+//        Soulation soulation = new Soulation();
+//        for (int i = 0; i < 10; i++) {
+//            int n = random.nextInt(1, 20);
+//            int[] a = new int[n + 5];
+//            for (int j = 0; j < n; j++) {
+//                a[j] = random.nextInt(1, 20);
+//            }
+//            int my = soulation.func_1(n, a);
+//            int he = soulation.func_2(n, a);
+//            if (my == he) {
+//                System.out.println("序号" + i + "测试成功！");
+//
+//            }else {
+//                System.out.println(n);
+//                for (int j = 0; j < n; j++) {
+//                    System.out.print(a[j]+" ");
+//                }
+//                return;
+//            }
+//
+//        }
+//
+//
+//    }
 }
 
 
